@@ -92,7 +92,7 @@ stress-detection/
 ## Setup
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/stress-detection.git
+git clone https://github.com/Praruj/stress-detection.git
 cd stress-detection
 python -m venv .venv
 source .venv/bin/activate
