@@ -1,0 +1,31 @@
+# Virtual environment
+.venv/
+venv/
+env/
+
+# Dataset — too large for GitHub (1.7 GB)
+WESAD/
+WESAD.zip
+
+# Processed numpy arrays — too large (regenerate with notebook 02)
+data/processed/
+
+# Jupyter internals
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Model checkpoints (we'll add these later)
+models/checkpoints/
+
+# Logs
+*.log
+wandb/
