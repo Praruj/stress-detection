@@ -1,0 +1,71 @@
+{
+  "model": "StressLSTM-2layer",
+  "dataset": "WESAD",
+  "n_classes": 4,
+  "class_names": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "train_subjects": [
+    "S11",
+    "S13",
+    "S14",
+    "S16",
+    "S17",
+    "S4",
+    "S5",
+    "S7",
+    "S8",
+    "S9"
+  ],
+  "val_subjects": [
+    "S3",
+    "S6"
+  ],
+  "test_subjects": [
+    "S15",
+    "S2"
+  ],
+  "total_windows": 1302,
+  "input_shape": [
+    4200,
+    4
+  ],
+  "best_epoch": 11,
+  "test_accuracy": 0.1902,
+  "test_macro_f1": 0.1684,
+  "per_class_f1": {
+    "Baseline": 0.1176,
+    "Stress": 0.4182,
+    "Amusement": 0.0984,
+    "Meditation": 0.0392
+  },
+  "confusion_matrix": [
+    [
+      5,
+      25,
+      43,
+      2
+    ],
+    [
+      1,
+      23,
+      16,
+      0
+    ],
+    [
+      1,
+      14,
+      6,
+      1
+    ],
+    [
+      3,
+      8,
+      35,
+      1
+    ]
+  ]
+}
