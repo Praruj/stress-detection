@@ -1,0 +1,200 @@
+{
+  "run": "rf_binary_loso",
+  "model": "rf",
+  "task": "binary",
+  "eval": "loso",
+  "classes": [
+    "Non-stress",
+    "Stress"
+  ],
+  "n_windows": 2052,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.9254,
+  "macro_f1": 0.9111,
+  "per_subject_accuracy_mean": 0.9248,
+  "per_subject_accuracy_std": 0.0922,
+  "per_subject_macro_f1_mean": 0.9042,
+  "per_subject_macro_f1_std": 0.1269,
+  "per_class_f1": {
+    "Non-stress": 0.9468,
+    "Stress": 0.8755
+  },
+  "confusion_matrix": [
+    [
+      1361,
+      77
+    ],
+    [
+      76,
+      538
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 132,
+      "accuracy": 0.7045,
+      "macro_f1": 0.6425,
+      "best_epoch": null
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 134,
+      "accuracy": 0.9776,
+      "macro_f1": 0.9731,
+      "best_epoch": null
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 134,
+      "accuracy": 0.9776,
+      "macro_f1": 0.9722,
+      "best_epoch": null
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 137,
+      "accuracy": 0.9781,
+      "macro_f1": 0.9729,
+      "best_epoch": null
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 136,
+      "accuracy": 0.8897,
+      "macro_f1": 0.8662,
+      "best_epoch": null
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 136,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": null
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 136,
+      "accuracy": 0.9559,
+      "macro_f1": 0.9461,
+      "best_epoch": null
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 136,
+      "accuracy": 0.8456,
+      "macro_f1": 0.8346,
+      "best_epoch": null
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": null
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 138,
+      "accuracy": 0.7536,
+      "macro_f1": 0.5848,
+      "best_epoch": null
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 138,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": null
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 138,
+      "accuracy": 0.8478,
+      "macro_f1": 0.8386,
+      "best_epoch": null
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 138,
+      "accuracy": 0.9783,
+      "macro_f1": 0.9738,
+      "best_epoch": null
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 137,
+      "accuracy": 0.9635,
+      "macro_f1": 0.9579,
+      "best_epoch": null
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": null
+    }
+  ],
+  "config": {
+    "model": "rf",
+    "task": "binary",
+    "eval": "loso",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "data": "/content/stress-detection/data/processed/wesad_100hz_60s_step15.npz",
+    "verbose": false
+  },
+  "runtime_s": 26.4
+}

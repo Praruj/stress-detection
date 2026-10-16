@@ -1,0 +1,200 @@
+{
+  "run": "cnnlstm_binary_loso",
+  "model": "cnnlstm",
+  "task": "binary",
+  "eval": "loso",
+  "classes": [
+    "Non-stress",
+    "Stress"
+  ],
+  "n_windows": 2052,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.9259,
+  "macro_f1": 0.9141,
+  "per_subject_accuracy_mean": 0.9254,
+  "per_subject_accuracy_std": 0.0724,
+  "per_subject_macro_f1_mean": 0.9156,
+  "per_subject_macro_f1_std": 0.079,
+  "per_class_f1": {
+    "Non-stress": 0.9459,
+    "Stress": 0.8824
+  },
+  "confusion_matrix": [
+    [
+      1330,
+      108
+    ],
+    [
+      44,
+      570
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 132,
+      "accuracy": 0.7955,
+      "macro_f1": 0.7835,
+      "best_epoch": 3
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 134,
+      "accuracy": 0.8806,
+      "macro_f1": 0.8689,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 134,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 137,
+      "accuracy": 0.9416,
+      "macro_f1": 0.9246,
+      "best_epoch": 8
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 136,
+      "accuracy": 0.9779,
+      "macro_f1": 0.9728,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 136,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 14
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 136,
+      "accuracy": 0.9485,
+      "macro_f1": 0.9393,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 136,
+      "accuracy": 0.7941,
+      "macro_f1": 0.7724,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 138,
+      "accuracy": 0.9855,
+      "macro_f1": 0.9827,
+      "best_epoch": 2
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 138,
+      "accuracy": 0.942,
+      "macro_f1": 0.9341,
+      "best_epoch": 3
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 138,
+      "accuracy": 0.8188,
+      "macro_f1": 0.8013,
+      "best_epoch": 3
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 138,
+      "accuracy": 0.8986,
+      "macro_f1": 0.866,
+      "best_epoch": 2
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 137,
+      "accuracy": 0.8978,
+      "macro_f1": 0.8878,
+      "best_epoch": 1
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 3
+    }
+  ],
+  "config": {
+    "model": "cnnlstm",
+    "task": "binary",
+    "eval": "loso",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "data": "/content/stress-detection/data/processed/wesad_100hz_60s_step15.npz",
+    "verbose": false
+  },
+  "runtime_s": 129.1
+}

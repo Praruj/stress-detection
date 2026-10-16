@@ -1,0 +1,244 @@
+{
+  "run": "cnnlstm_4class_loso_e3_small",
+  "model": "cnnlstm",
+  "task": "4class",
+  "eval": "loso",
+  "classes": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "n_windows": 2737,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.7351,
+  "macro_f1": 0.6419,
+  "per_subject_accuracy_mean": 0.7346,
+  "per_subject_accuracy_std": 0.092,
+  "per_subject_macro_f1_mean": 0.614,
+  "per_subject_macro_f1_std": 0.0672,
+  "val_macro_f1_mean": 0.7923,
+  "per_class_f1": {
+    "Baseline": 0.8617,
+    "Stress": 0.7953,
+    "Amusement": 0.1891,
+    "Meditation": 0.7216
+  },
+  "confusion_matrix": [
+    [
+      925,
+      44,
+      112,
+      40
+    ],
+    [
+      23,
+      509,
+      39,
+      43
+    ],
+    [
+      63,
+      42,
+      57,
+      155
+    ],
+    [
+      15,
+      71,
+      78,
+      521
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 177,
+      "accuracy": 0.5593,
+      "macro_f1": 0.5176,
+      "best_epoch": 3,
+      "val_f1": 0.6234
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 179,
+      "accuracy": 0.7095,
+      "macro_f1": 0.6012,
+      "best_epoch": 8,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 181,
+      "accuracy": 0.6575,
+      "macro_f1": 0.6614,
+      "best_epoch": 33,
+      "val_f1": 0.9665
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 183,
+      "accuracy": 0.6995,
+      "macro_f1": 0.6315,
+      "best_epoch": 2,
+      "val_f1": 0.6397
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 182,
+      "accuracy": 0.6429,
+      "macro_f1": 0.4628,
+      "best_epoch": 12,
+      "val_f1": 0.9382
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 182,
+      "accuracy": 0.8846,
+      "macro_f1": 0.7197,
+      "best_epoch": 5,
+      "val_f1": 0.7576
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 182,
+      "accuracy": 0.6648,
+      "macro_f1": 0.6121,
+      "best_epoch": 9,
+      "val_f1": 0.7847
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 182,
+      "accuracy": 0.7637,
+      "macro_f1": 0.5755,
+      "best_epoch": 5,
+      "val_f1": 0.6818
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 187,
+      "accuracy": 0.7487,
+      "macro_f1": 0.5718,
+      "best_epoch": 27,
+      "val_f1": 0.7076
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 184,
+      "accuracy": 0.712,
+      "macro_f1": 0.5882,
+      "best_epoch": 4,
+      "val_f1": 0.9471
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 184,
+      "accuracy": 0.663,
+      "macro_f1": 0.5914,
+      "best_epoch": 33,
+      "val_f1": 0.9731
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 184,
+      "accuracy": 0.875,
+      "macro_f1": 0.6876,
+      "best_epoch": 1,
+      "val_f1": 0.7724
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 184,
+      "accuracy": 0.7772,
+      "macro_f1": 0.6808,
+      "best_epoch": 1,
+      "val_f1": 0.7035
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 183,
+      "accuracy": 0.8852,
+      "macro_f1": 0.6994,
+      "best_epoch": 2,
+      "val_f1": 0.6292
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 183,
+      "accuracy": 0.776,
+      "macro_f1": 0.6089,
+      "best_epoch": 31,
+      "val_f1": 0.7603
+    }
+  ],
+  "config": {
+    "model": "cnnlstm",
+    "task": "4class",
+    "eval": "loso",
+    "epochs": 60,
+    "patience": 15,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "seed": 42,
+    "verbose": false,
+    "dropout": 0.5,
+    "width": 16,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "crop": 45.0,
+    "chan_drop": 0.15,
+    "n_val": 1,
+    "ensemble": 1,
+    "tag": "e3_small"
+  },
+  "runtime_s": 215.9
+}

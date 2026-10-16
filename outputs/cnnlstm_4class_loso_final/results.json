@@ -1,0 +1,244 @@
+{
+  "run": "cnnlstm_4class_loso_final",
+  "model": "cnnlstm",
+  "task": "4class",
+  "eval": "loso",
+  "classes": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "n_windows": 2737,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.7676,
+  "macro_f1": 0.6793,
+  "per_subject_accuracy_mean": 0.7671,
+  "per_subject_accuracy_std": 0.0976,
+  "per_subject_macro_f1_mean": 0.6565,
+  "per_subject_macro_f1_std": 0.1044,
+  "val_macro_f1_mean": 0.7899,
+  "per_class_f1": {
+    "Baseline": 0.891,
+    "Stress": 0.8305,
+    "Amusement": 0.2557,
+    "Meditation": 0.7402
+  },
+  "confusion_matrix": [
+    [
+      977,
+      53,
+      46,
+      45
+    ],
+    [
+      11,
+      529,
+      45,
+      29
+    ],
+    [
+      59,
+      59,
+      78,
+      121
+    ],
+    [
+      25,
+      19,
+      124,
+      517
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 177,
+      "accuracy": 0.5311,
+      "macro_f1": 0.4865,
+      "best_epoch": 14,
+      "val_f1": 0.6019
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 179,
+      "accuracy": 0.7095,
+      "macro_f1": 0.5962,
+      "best_epoch": 2,
+      "val_f1": 0.9202
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 181,
+      "accuracy": 0.7514,
+      "macro_f1": 0.7045,
+      "best_epoch": 14,
+      "val_f1": 0.9604
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 183,
+      "accuracy": 0.9016,
+      "macro_f1": 0.7852,
+      "best_epoch": 11,
+      "val_f1": 0.6791
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 182,
+      "accuracy": 0.8077,
+      "macro_f1": 0.6424,
+      "best_epoch": 6,
+      "val_f1": 0.9838
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 182,
+      "accuracy": 0.8681,
+      "macro_f1": 0.7755,
+      "best_epoch": 25,
+      "val_f1": 0.7292
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 182,
+      "accuracy": 0.6703,
+      "macro_f1": 0.6434,
+      "best_epoch": 7,
+      "val_f1": 0.7585
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 182,
+      "accuracy": 0.8187,
+      "macro_f1": 0.6285,
+      "best_epoch": 1,
+      "val_f1": 0.6785
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 187,
+      "accuracy": 0.6578,
+      "macro_f1": 0.4846,
+      "best_epoch": 11,
+      "val_f1": 0.8076
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 184,
+      "accuracy": 0.8533,
+      "macro_f1": 0.7278,
+      "best_epoch": 2,
+      "val_f1": 0.9145
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 184,
+      "accuracy": 0.8533,
+      "macro_f1": 0.8421,
+      "best_epoch": 7,
+      "val_f1": 0.7856
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 184,
+      "accuracy": 0.8587,
+      "macro_f1": 0.7371,
+      "best_epoch": 9,
+      "val_f1": 0.88
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 184,
+      "accuracy": 0.7935,
+      "macro_f1": 0.6829,
+      "best_epoch": 1,
+      "val_f1": 0.7751
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 183,
+      "accuracy": 0.6995,
+      "macro_f1": 0.5506,
+      "best_epoch": 1,
+      "val_f1": 0.6918
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 183,
+      "accuracy": 0.7322,
+      "macro_f1": 0.5596,
+      "best_epoch": 13,
+      "val_f1": 0.6823
+    }
+  ],
+  "config": {
+    "model": "cnnlstm",
+    "task": "4class",
+    "eval": "loso",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "verbose": false,
+    "dropout": 0.3,
+    "width": 32,
+    "weight_decay": 0.001,
+    "label_smoothing": 0.0,
+    "crop": 0,
+    "chan_drop": 0.0,
+    "n_val": 1,
+    "ensemble": 5,
+    "tag": "final"
+  },
+  "runtime_s": 1225.0
+}

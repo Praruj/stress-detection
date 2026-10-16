@@ -1,0 +1,224 @@
+{
+  "run": "hybrid_binary_loso_final",
+  "model": "hybrid",
+  "task": "binary",
+  "eval": "loso",
+  "classes": [
+    "Non-stress",
+    "Stress"
+  ],
+  "n_windows": 2052,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.9274,
+  "macro_f1": 0.9162,
+  "per_subject_accuracy_mean": 0.9267,
+  "per_subject_accuracy_std": 0.0769,
+  "per_subject_macro_f1_mean": 0.9167,
+  "per_subject_macro_f1_std": 0.0856,
+  "val_macro_f1_mean": 0.9446,
+  "per_class_f1": {
+    "Non-stress": 0.9468,
+    "Stress": 0.8855
+  },
+  "confusion_matrix": [
+    [
+      1327,
+      111
+    ],
+    [
+      38,
+      576
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 132,
+      "accuracy": 0.75,
+      "macro_f1": 0.7311,
+      "best_epoch": 2,
+      "val_f1": 0.9327
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 134,
+      "accuracy": 0.9104,
+      "macro_f1": 0.8946,
+      "best_epoch": 1,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 134,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 3,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 137,
+      "accuracy": 0.9416,
+      "macro_f1": 0.9246,
+      "best_epoch": 3,
+      "val_f1": 0.8441
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 136,
+      "accuracy": 0.8676,
+      "macro_f1": 0.812,
+      "best_epoch": 1,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 136,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 2,
+      "val_f1": 0.9947
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 136,
+      "accuracy": 0.9926,
+      "macro_f1": 0.9912,
+      "best_epoch": 1,
+      "val_f1": 0.8375
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 136,
+      "accuracy": 0.8456,
+      "macro_f1": 0.8346,
+      "best_epoch": 1,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 1,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 138,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 4,
+      "val_f1": 0.951
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 138,
+      "accuracy": 0.8841,
+      "macro_f1": 0.8734,
+      "best_epoch": 11,
+      "val_f1": 0.8642
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 138,
+      "accuracy": 0.8478,
+      "macro_f1": 0.8386,
+      "best_epoch": 2,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 138,
+      "accuracy": 0.9928,
+      "macro_f1": 0.9914,
+      "best_epoch": 1,
+      "val_f1": 0.8731
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 137,
+      "accuracy": 0.8686,
+      "macro_f1": 0.8583,
+      "best_epoch": 1,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 141,
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "best_epoch": 15,
+      "val_f1": 0.8715
+    }
+  ],
+  "config": {
+    "model": "hybrid",
+    "task": "binary",
+    "eval": "loso",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "verbose": false,
+    "dropout": 0.3,
+    "width": 32,
+    "weight_decay": 0.001,
+    "label_smoothing": 0.0,
+    "crop": 0,
+    "chan_drop": 0.0,
+    "n_val": 1,
+    "ensemble": 5,
+    "tag": "final"
+  },
+  "runtime_s": 676.4
+}

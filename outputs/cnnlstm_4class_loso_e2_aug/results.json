@@ -1,0 +1,244 @@
+{
+  "run": "cnnlstm_4class_loso_e2_aug",
+  "model": "cnnlstm",
+  "task": "4class",
+  "eval": "loso",
+  "classes": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "n_windows": 2737,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.7238,
+  "macro_f1": 0.6486,
+  "per_subject_accuracy_mean": 0.7238,
+  "per_subject_accuracy_std": 0.1058,
+  "per_subject_macro_f1_mean": 0.6092,
+  "per_subject_macro_f1_std": 0.1261,
+  "val_macro_f1_mean": 0.8147,
+  "per_class_f1": {
+    "Baseline": 0.8496,
+    "Stress": 0.7041,
+    "Amusement": 0.3091,
+    "Meditation": 0.7316
+  },
+  "confusion_matrix": [
+    [
+      932,
+      57,
+      86,
+      46
+    ],
+    [
+      72,
+      433,
+      53,
+      56
+    ],
+    [
+      44,
+      64,
+      98,
+      111
+    ],
+    [
+      25,
+      62,
+      80,
+      518
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 177,
+      "accuracy": 0.6723,
+      "macro_f1": 0.5877,
+      "best_epoch": 1,
+      "val_f1": 0.6246
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 179,
+      "accuracy": 0.7207,
+      "macro_f1": 0.5902,
+      "best_epoch": 5,
+      "val_f1": 1.0
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 181,
+      "accuracy": 0.8177,
+      "macro_f1": 0.7876,
+      "best_epoch": 18,
+      "val_f1": 0.9912
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 183,
+      "accuracy": 0.8798,
+      "macro_f1": 0.8565,
+      "best_epoch": 16,
+      "val_f1": 0.7752
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 182,
+      "accuracy": 0.6813,
+      "macro_f1": 0.4577,
+      "best_epoch": 9,
+      "val_f1": 0.9191
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 182,
+      "accuracy": 0.7747,
+      "macro_f1": 0.7079,
+      "best_epoch": 21,
+      "val_f1": 0.8005
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 182,
+      "accuracy": 0.511,
+      "macro_f1": 0.4421,
+      "best_epoch": 1,
+      "val_f1": 0.6752
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 182,
+      "accuracy": 0.7967,
+      "macro_f1": 0.6082,
+      "best_epoch": 2,
+      "val_f1": 0.6549
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 187,
+      "accuracy": 0.6738,
+      "macro_f1": 0.4573,
+      "best_epoch": 16,
+      "val_f1": 0.8349
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 184,
+      "accuracy": 0.7065,
+      "macro_f1": 0.5933,
+      "best_epoch": 2,
+      "val_f1": 0.9917
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 184,
+      "accuracy": 0.5054,
+      "macro_f1": 0.4663,
+      "best_epoch": 30,
+      "val_f1": 0.9925
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 184,
+      "accuracy": 0.8478,
+      "macro_f1": 0.7915,
+      "best_epoch": 10,
+      "val_f1": 0.8471
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 184,
+      "accuracy": 0.7663,
+      "macro_f1": 0.5906,
+      "best_epoch": 2,
+      "val_f1": 0.7458
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 183,
+      "accuracy": 0.6885,
+      "macro_f1": 0.5433,
+      "best_epoch": 19,
+      "val_f1": 0.6707
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 183,
+      "accuracy": 0.8142,
+      "macro_f1": 0.6571,
+      "best_epoch": 15,
+      "val_f1": 0.6974
+    }
+  ],
+  "config": {
+    "model": "cnnlstm",
+    "task": "4class",
+    "eval": "loso",
+    "epochs": 60,
+    "patience": 15,
+    "batch_size": 32,
+    "lr": 0.0003,
+    "seed": 42,
+    "verbose": false,
+    "dropout": 0.5,
+    "width": 32,
+    "weight_decay": 0.01,
+    "label_smoothing": 0.1,
+    "crop": 45.0,
+    "chan_drop": 0.15,
+    "n_val": 1,
+    "ensemble": 1,
+    "tag": "e2_aug"
+  },
+  "runtime_s": 318.6
+}

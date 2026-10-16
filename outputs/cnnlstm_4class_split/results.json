@@ -1,0 +1,81 @@
+{
+  "run": "cnnlstm_4class_split",
+  "model": "cnnlstm",
+  "task": "4class",
+  "eval": "split",
+  "classes": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "n_windows": 2737,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.7119,
+  "macro_f1": 0.6119,
+  "per_subject_accuracy_mean": 0.7119,
+  "per_subject_accuracy_std": 0.0,
+  "per_subject_macro_f1_mean": 0.6119,
+  "per_subject_macro_f1_std": 0.0,
+  "per_class_f1": {
+    "Baseline": 0.9236,
+    "Stress": 0.4677,
+    "Amusement": 0.3846,
+    "Meditation": 0.6716
+  },
+  "confusion_matrix": [
+    [
+      127,
+      15,
+      0,
+      6
+    ],
+    [
+      0,
+      29,
+      0,
+      51
+    ],
+    [
+      0,
+      0,
+      10,
+      32
+    ],
+    [
+      0,
+      0,
+      0,
+      91
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "split",
+      "test": [
+        "S2",
+        "S15"
+      ],
+      "n": 361,
+      "accuracy": 0.7119,
+      "macro_f1": 0.6119,
+      "best_epoch": 3
+    }
+  ],
+  "config": {
+    "model": "cnnlstm",
+    "task": "4class",
+    "eval": "split",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "data": "/content/stress-detection/data/processed/wesad_100hz_60s_step15.npz",
+    "verbose": true
+  },
+  "runtime_s": 11.9
+}

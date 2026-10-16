@@ -1,0 +1,244 @@
+{
+  "run": "hybrid_4class_loso_h0_base",
+  "model": "hybrid",
+  "task": "4class",
+  "eval": "loso",
+  "classes": [
+    "Baseline",
+    "Stress",
+    "Amusement",
+    "Meditation"
+  ],
+  "n_windows": 2737,
+  "input_shape": [
+    6000,
+    5
+  ],
+  "accuracy": 0.7826,
+  "macro_f1": 0.724,
+  "per_subject_accuracy_mean": 0.782,
+  "per_subject_accuracy_std": 0.1267,
+  "per_subject_macro_f1_mean": 0.7009,
+  "per_subject_macro_f1_std": 0.1539,
+  "val_macro_f1_mean": 0.8018,
+  "per_class_f1": {
+    "Baseline": 0.9072,
+    "Stress": 0.8073,
+    "Amusement": 0.4309,
+    "Meditation": 0.7507
+  },
+  "confusion_matrix": [
+    [
+      992,
+      47,
+      38,
+      44
+    ],
+    [
+      26,
+      488,
+      75,
+      25
+    ],
+    [
+      42,
+      33,
+      159,
+      83
+    ],
+    [
+      6,
+      27,
+      149,
+      503
+    ]
+  ],
+  "folds": [
+    {
+      "fold": "S2",
+      "test": [
+        "S2"
+      ],
+      "n": 177,
+      "accuracy": 0.5254,
+      "macro_f1": 0.4525,
+      "best_epoch": 2,
+      "val_f1": 0.5736
+    },
+    {
+      "fold": "S3",
+      "test": [
+        "S3"
+      ],
+      "n": 179,
+      "accuracy": 0.7095,
+      "macro_f1": 0.6043,
+      "best_epoch": 2,
+      "val_f1": 0.9671
+    },
+    {
+      "fold": "S4",
+      "test": [
+        "S4"
+      ],
+      "n": 181,
+      "accuracy": 0.8895,
+      "macro_f1": 0.8587,
+      "best_epoch": 17,
+      "val_f1": 0.9868
+    },
+    {
+      "fold": "S5",
+      "test": [
+        "S5"
+      ],
+      "n": 183,
+      "accuracy": 0.8907,
+      "macro_f1": 0.8881,
+      "best_epoch": 26,
+      "val_f1": 0.6975
+    },
+    {
+      "fold": "S6",
+      "test": [
+        "S6"
+      ],
+      "n": 182,
+      "accuracy": 0.7582,
+      "macro_f1": 0.5891,
+      "best_epoch": 12,
+      "val_f1": 0.9649
+    },
+    {
+      "fold": "S7",
+      "test": [
+        "S7"
+      ],
+      "n": 182,
+      "accuracy": 0.9286,
+      "macro_f1": 0.9175,
+      "best_epoch": 17,
+      "val_f1": 0.7405
+    },
+    {
+      "fold": "S8",
+      "test": [
+        "S8"
+      ],
+      "n": 182,
+      "accuracy": 0.5769,
+      "macro_f1": 0.4922,
+      "best_epoch": 4,
+      "val_f1": 0.7394
+    },
+    {
+      "fold": "S9",
+      "test": [
+        "S9"
+      ],
+      "n": 182,
+      "accuracy": 0.8626,
+      "macro_f1": 0.7965,
+      "best_epoch": 1,
+      "val_f1": 0.6818
+    },
+    {
+      "fold": "S10",
+      "test": [
+        "S10"
+      ],
+      "n": 187,
+      "accuracy": 0.7166,
+      "macro_f1": 0.6082,
+      "best_epoch": 3,
+      "val_f1": 0.8293
+    },
+    {
+      "fold": "S11",
+      "test": [
+        "S11"
+      ],
+      "n": 184,
+      "accuracy": 0.9239,
+      "macro_f1": 0.8621,
+      "best_epoch": 3,
+      "val_f1": 0.9801
+    },
+    {
+      "fold": "S13",
+      "test": [
+        "S13"
+      ],
+      "n": 184,
+      "accuracy": 0.8859,
+      "macro_f1": 0.8549,
+      "best_epoch": 3,
+      "val_f1": 0.7151
+    },
+    {
+      "fold": "S14",
+      "test": [
+        "S14"
+      ],
+      "n": 184,
+      "accuracy": 0.8859,
+      "macro_f1": 0.7516,
+      "best_epoch": 12,
+      "val_f1": 0.9153
+    },
+    {
+      "fold": "S15",
+      "test": [
+        "S15"
+      ],
+      "n": 184,
+      "accuracy": 0.625,
+      "macro_f1": 0.5433,
+      "best_epoch": 1,
+      "val_f1": 0.9669
+    },
+    {
+      "fold": "S16",
+      "test": [
+        "S16"
+      ],
+      "n": 183,
+      "accuracy": 0.8251,
+      "macro_f1": 0.7494,
+      "best_epoch": 1,
+      "val_f1": 0.6427
+    },
+    {
+      "fold": "S17",
+      "test": [
+        "S17"
+      ],
+      "n": 183,
+      "accuracy": 0.7268,
+      "macro_f1": 0.5455,
+      "best_epoch": 3,
+      "val_f1": 0.6258
+    }
+  ],
+  "config": {
+    "model": "hybrid",
+    "task": "4class",
+    "eval": "loso",
+    "epochs": 40,
+    "patience": 10,
+    "batch_size": 32,
+    "lr": 0.001,
+    "seed": 42,
+    "verbose": false,
+    "dropout": 0.3,
+    "width": 32,
+    "weight_decay": 0.001,
+    "label_smoothing": 0.0,
+    "crop": 0,
+    "chan_drop": 0.0,
+    "n_val": 1,
+    "ensemble": 1,
+    "tag": "h0_base"
+  },
+  "runtime_s": 223.7
+}
