@@ -201,5 +201,5 @@ redistributed here.
 
 ## Author
 
-**Praruj Thapa**, ML & AI Engineer, Osaka.
+**Praruj Thapa**, ML & AI Engineer.
 [LinkedIn](https://www.linkedin.com/in/praruj-thapa) · [GitHub](https://github.com/Praruj) · thapa.praruj@gmail.com
